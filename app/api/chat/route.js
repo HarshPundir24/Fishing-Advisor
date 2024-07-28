@@ -48,7 +48,7 @@ export async function POST(req) {
       url,
       {
         prompt: question,
-        max_tokens: 300,
+        max_tokens: 350,
       },
       {
         headers: {
