@@ -25,14 +25,14 @@ export async function POST(req) {
       'bottom fishing', 'trolling', 'jigging', 'surf fishing', 'pier fishing',
       'kayak fishing', 'boat fishing', 'ice auger', 'fish finder',
       'fishing rod holder', 'fishing net', 'fishing waders', 'fishing vest',
-      'catch and release', 'barbless hooks', 'fishing charter', 'fishing lodge', 'fish'
+      'catch and release', 'barbless hooks', 'fishing charter', 'fishing lodge', 'fish', 'fishing knot', 'What is the best fishing knot to use?'
     ];
     return fishingKeywords.some(keyword => question.toLowerCase().includes(keyword));
   };
 
   const isGreeting = (question) => {
-    const greetings = ['hello', 'hi', 'how are you', 'hey', 'good morning', 'good afternoon', 'good evening'];
-    return greetings.some(greeting => question.toLowerCase().includes(greeting));
+    const greetings = ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening'];
+    return greetings.some(greeting => question.toLowerCase().startsWith(greeting));
   };
 
   if (isGreeting(question)) {
